@@ -97,9 +97,10 @@ public class Practica1ModificadaController implements Initializable {
             txtNombre.requestFocus();
         }
         alert.showAndWait();
+        //Esto es para que pase lo que pase con la alerta que salga despues el formulario se vacie y este el focus en nombre
+        btnLimpiar.fire();
+        txtNombre.requestFocus();
     }
-
-
     @FXML
     void btnLimpiarClick(ActionEvent event) {
         txtNombre.setText("");
@@ -122,8 +123,6 @@ public class Practica1ModificadaController implements Initializable {
             System.exit(0);
         }else
             txtNombre.requestFocus();
-
-
     }
 
     @Override
@@ -140,5 +139,4 @@ public class Practica1ModificadaController implements Initializable {
         });
 
     }
-
 }
