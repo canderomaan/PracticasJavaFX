@@ -101,6 +101,7 @@ public class Practica1ModificadaController implements Initializable {
         btnLimpiar.fire();
         txtNombre.requestFocus();
     }
+
     @FXML
     void btnLimpiarClick(ActionEvent event) {
         txtNombre.setText("");
