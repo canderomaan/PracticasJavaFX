@@ -83,10 +83,20 @@ public class Practica1ModificadaController implements Initializable {
             alert.setContentText(res);
         }else if(matNombre.matches() && matApellidos.matches())  {
             alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Datos introducidos correctamente.");
+            alert.setTitle("Campos introducidos.");
             alert.setHeaderText(null);
-            alert.setContentText("Nombre y Apellidos introducidos correctamente.");
+            alert.setContentText("Datos introducidos correctamente.\n" +
+                    "Nombre: "+txtNombre+"\nApellido: "+txtApellidos+"\n" +
+                    "Edad: "+edad+"\nFecha de nacimiento: "+fechaNacimiento+
+                    "\nSexo: "+sexo);
+        }else{
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Datos incorrectos...");
+            alert.setHeaderText(null);
+            alert.setContentText("Nombre y apellidos introducidos incorrectamente.");
+            txtNombre.requestFocus();
         }
+        alert.showAndWait();
     }
 
 
