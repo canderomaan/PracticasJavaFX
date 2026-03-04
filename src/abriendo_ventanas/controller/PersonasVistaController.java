@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import practicaListaPersonas.model.Persona;
 
 import java.net.URL;
@@ -28,7 +29,7 @@ public class PersonasVistaController implements Initializable {
     private TableColumn<?, ?> colNombre;
 
     @FXML
-    private TableView<?> tblPersonas;
+    private TableView<Persona> tblPersonas;
 
     private ObservableList<Persona> personas;
 
@@ -36,6 +37,10 @@ public class PersonasVistaController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btnAgregarPersona.setOnAction(this::agregarPersonas);
         personas = FXCollections.observableArrayList();
+        tblPersonas.setItems(personas);
+        colNombre.setCellValueFactory(new PropertyValueFactory("nombre"));
+        colApellidos.setCellValueFactory(new PropertyValueFactory("apellidos"));
+        colEdad.setCellValueFactory(new PropertyValueFactory("edad"));
     }
 
     private void agregarPersonas(ActionEvent actionEvent) {
