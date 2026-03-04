@@ -13,7 +13,7 @@ public class AbriendoVentanas extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("./view/personasDialogVista.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("./view/personasVista.fxml"));
         primaryStage.setTitle("Practica Personas");
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);

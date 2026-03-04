@@ -51,7 +51,7 @@ public class PersonasVistaController implements Initializable {
 
     private void agregarPersonas(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("./view/personasDialogVista.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/personasDialogVista.fxml"));
             Parent root = loader.load();
             PersonasDialogController controllerSecondView = loader.getController();
             Stage secondStage = new Stage();
