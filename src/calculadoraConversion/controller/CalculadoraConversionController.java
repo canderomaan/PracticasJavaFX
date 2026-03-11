@@ -48,6 +48,5 @@ public class CalculadoraConversionController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ToggleGroup toggleGroup = new ToggleGroup();
-
     }
 }
